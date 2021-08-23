@@ -4,6 +4,7 @@ pipeline {
         stage("Deployment") {
             steps {
                 sh 'php --version'
+		sh 'composer install'
                 sh 'composer dump-autoload'
                 sh 'php artisan clear-compiled'
                 sh 'php artisan cache:clear'
