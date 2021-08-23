@@ -12,7 +12,6 @@ pipeline {
                 sh 'php artisan config:cache'
                 sh 'php artisan route:clear'
                 sh 'php artisan view:clear'
-                sh '/etc/init.d/supervisor restart'
             }
         }
     }
